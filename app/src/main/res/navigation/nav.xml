@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/wlcFragment">
+
+    <fragment
+        android:id="@+id/wlcFragment"
+        android:name="com.example.fragmentdemo.WlcFragment"
+        android:label="fragment_wlc"
+        tools:layout="@layout/fragment_wlc" >
+        <action
+            android:id="@+id/action_wlcFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.fragmentdemo.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_lastFragment"
+            app:destination="@id/lastFragment"
+            app:popUpTo="@id/wlcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastFragment"
+        android:name="com.example.fragmentdemo.LastFragment"
+        android:label="fragment_last"
+        tools:layout="@layout/fragment_last" />
+</navigation>
