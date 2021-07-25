@@ -29,5 +29,9 @@
         android:id="@+id/lastFragment"
         android:name="com.example.fragmentdemo.LastFragment"
         android:label="fragment_last"
-        tools:layout="@layout/fragment_last" />
+        tools:layout="@layout/fragment_last" >
+        <argument
+            android:name="score"
+            app:argType="integer" />
+    </fragment>
 </navigation>

@@ -70,12 +70,15 @@ binding.btnNext.setOnClickListener(){
             setQuestion()
 
         } else {
-            Navigation.findNavController(it).navigate(R.id.action_gameFragment_to_lastFragment)
+            val action = GameFragmentDirections.actionGameFragmentToLastFragment(score)
+            Navigation.findNavController(it).navigate(action)
         }
     }else{
         Toast.makeText(context, "please select answer", Toast.LENGTH_LONG).show()
     }
 }
+
+
         return binding.root
     }
 
